@@ -10,7 +10,10 @@ For the latest and greatest:
 
 ## Configuration
 
-Gruf expects a remote called "gerrit" to exist in your git config.  It must be the `ssh://` style in order for Gruf to parse it correctly.  For example:
+By default, Gruf expects a remote called "gerrit" to exist in your git config
+though the default remote name can be overridden by setting `remote` in Gruf's
+config.  It must be the `ssh://` style in order for Gruf to parse it
+correctly.  For example:
 
     [remote "gerrit"]
         url = ssh://someuser@gerrit.yourcompany.com:29418/repo/path

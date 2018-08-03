@@ -91,7 +91,7 @@ def main():
         else config.get('cache', {}).get('lifetime'))
 
     g = gruf.gerrit.Gerrit(
-        remote=args.remote,
+        remote=args.remote or config.get('remote'),
         querymap=config.get('querymap'),
         cache_lifetime=cache_lifetime)
     LOG.debug('remote %s', g.remote)
